@@ -1,4 +1,4 @@
-FROM node:16.13.1
+FROM node:17.9.0-alpine3.15
 
 WORKDIR /usr/src/app
 COPY package*.json ./
@@ -7,7 +7,7 @@ RUN npm install
 COPY ./src ./src
 RUN npm run build
 
-FROM node:16.13.1-alpine
+FROM node:17.9.0-alpine3.15
 
 WORKDIR /usr/src/app
 COPY package*.json ./
